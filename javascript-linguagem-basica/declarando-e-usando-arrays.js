@@ -92,3 +92,8 @@ console.log('\nO número 2  é  um  array ?  ', 2 instanceof Array);
 let numeros4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0,];
 console.log('\nArray numeros4 após execução do método reverse()');
 console.log(numeros4.reverse().join());
+
+// Método  sort() de arrays  classifica  os  lementos  de um array.
+const nomes = ['João', 'Maria', 'Antônio','Severino'];
+console.log('\nArray nomes antes da ordenação: ', nomes);
+console.log('\nnomes após execução do método sort()',nomes.sort());
