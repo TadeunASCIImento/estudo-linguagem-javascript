@@ -109,3 +109,9 @@ console.log('\nInserindo o nome Ana no array nomes',nomes.push('Ana'));
 console.log('Após a inserção:',nomes.sort());
 nomes.pop('Severino');// exclui o nome Severino do array
 console.log('Após a exclusão:',nomes.sort());
+
+// Localizando um elemento em uma array  com o método find()
+var nome = nomes.find(function(nome){
+    return nome === 'Maria';
+});
+console.log('\nExibindo nome localizado no array nomes',nome);
