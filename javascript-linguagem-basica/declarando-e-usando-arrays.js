@@ -103,3 +103,9 @@ console.log('\nnomes após execução do método sort()',nomes.sort());
 var pares = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
 console.log('\npares antes da chamado do método concat', pares)
 console.log('array pares depois do métdo',pares.concat(22, 24, 26));
+
+// Inserindo e  removendo  elementos com o  métodos  pop()  e  push()
+console.log('\nInserindo o nome Ana no array nomes',nomes.push('Ana'));
+console.log('Após a inserção:',nomes.sort());
+nomes.pop('Severino');// exclui o nome Severino do array
+console.log('Após a exclusão:',nomes.sort());
