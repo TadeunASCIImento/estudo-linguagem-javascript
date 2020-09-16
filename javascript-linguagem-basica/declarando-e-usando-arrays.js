@@ -24,10 +24,8 @@ mapeados.forEach(function (x) {  // Lendo array mapeados
 });
 
 // Usando filter para filtrar elementos no array numeros
-menores = numeros.filter(function (x) {
-	if (x < 5)
-		console.log(x);
-});
+var maiores5 = numeros.filter((maior => { return maior > 5 ; }));
+console.log('Maiores que 5 com filter',maiores5);
 
 // Usando metodo every para verificação do array numeros
 numeros.every(function (x) { // funciona como todo
