@@ -1,5 +1,5 @@
 /*
-              MÉTODOS DE ARRAYS 
+              MÉTODOS DE ARRAYS
 */
 
 // Usando  forEach  para  iterar  um  array  de inteiros
@@ -8,7 +8,7 @@ numeros.forEach(function (x) {
 	console.log(Math.pow(x, 2));
 });
 
-// Incrementando  cada  elemento   do array de inteirios	
+// Incrementando  cada  elemento   do array de inteirios
 numeros.forEach(function (v, x, n) {
 	console.log('\nnumeros incrementado:', n[x] = v + 1);
 
@@ -23,19 +23,19 @@ mapeados.forEach(function (x) {  // Lendo array mapeados
 	console.log('\nArray numeros passado á mapeados:', x);
 });
 
-// Usando filter para filtrar elementos no array numeros 
+// Usando filter para filtrar elementos no array numeros
 menores = numeros.filter(function (x) {
 	if (x < 5)
 		console.log(x);
 });
 
-// Usando metodo every para verificação do array numeros 
+// Usando metodo every para verificação do array numeros
 numeros.every(function (x) { // funciona como todo
 	var retorno = x < 100;
 	console.log(retorno);
 });
 
-// Usando metodo  some  para verificação do array numeros 
+// Usando metodo  some  para verificação do array numeros
 numeros.some(function (x) {  // funciona como algum
 	var retorno = x % 2 === 0;
 	console.log(retorno);
@@ -75,8 +75,8 @@ function findAll(a, x) {
 
 // Array   de  testes  para  a   função  findAll  criada  acima
 var numeros3 = [1, 5, 2, 3, 4, 5, 5, 6, 7, 8, 5];
-var encontrados = findAll(numeros3, 5);  // Aqui chama a função 
-encontrados.forEach(function (x) { // Exibe as posições 
+var encontrados = findAll(numeros3, 5);  // Aqui chama a função
+encontrados.forEach(function (x) { // Exibe as posições
 	console.log('\nO numero  5 foi encontrado na poisção:', x);
 });
 
@@ -88,9 +88,7 @@ console.log('\nO número 2  é  um  array ?  ', Array.isArray(2));
 console.log('\nnumeros é  um array ? ', numeros instanceof Array);
 console.log('\nO número 2  é  um  array ?  ', 2 instanceof Array);
 
-
-
-
-
-
-
+// Método  reverse()  de  arrays  inverte  a  ordem  dos elementos
+let numeros4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0,];
+console.log('\nArray numeros4 após execução do método reverse()');
+console.log(numeros4.reverse().join());
