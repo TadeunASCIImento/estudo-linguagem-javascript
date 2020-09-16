@@ -97,3 +97,9 @@ console.log(numeros4.reverse().join());
 const nomes = ['João', 'Maria', 'Antônio','Severino'];
 console.log('\nArray nomes antes da ordenação: ', nomes);
 console.log('\nnomes após execução do método sort()',nomes.sort());
+
+
+// concat cria e retorna um novo array com os  elementos  em concat
+var pares = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+console.log('\npares antes da chamado do método concat', pares)
+console.log('array pares depois do métdo',pares.concat(22, 24, 26));
