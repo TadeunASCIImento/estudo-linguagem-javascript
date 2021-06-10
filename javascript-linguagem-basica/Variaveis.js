@@ -1,107 +1,70 @@
-/*
-  		   DECLARANDO E USANDO VARIÁVEIS.
- */
+// Declarando e acessando os valores em variáveis.
 
-// Declara  duas  variáveis  numéricas  do  tipo inteiro
-var numero1 = 10;
-var numero2 = 40;
+// Javascript aceita vários tipos de valores.
 
-// Declarando   variveis   literais  (string)
-var message1 = 'O resultado da soma é:';
-var message2 = 'O numero é impar';
-var message3 = "O numero é par";
-
-// Declara   uma    variável    booleana
-var user = 'tadeu@email.com';
-var pass = 'password';
-var validar = null;
-
-// Funcão verifica a paridade do  numero
-function verificarParidade(numero) {
-	if (numero % 2 == 0) {
-		return message3;
-	} else {
-		return message2;
-	}
-}
-
-// Simula   uma   validação   de  usuário
-function validarUsuario(usuario, senha) {
-	if (usuario == user && senha == pass)
-		validar = true;
-	else
-		validar = false;
-	return validar;
-}
-
-// Define   uma  função   para  somar  dois números
-function somar(x, y) { return x + y; }
-
-// Exibe  o   resultado    da   soma   no   console
-console.log(message1 + somar(numero1, numero2));
-
-// Exibe  a  verificação   da  paridade  do  numero
-console.log(verificarParidade(somar(numero1, numero2)));
-
-// Exibe  o  resultado  da  validação
-console.log((validarUsuario(user, pass)));
-
-// Declarando um objeto do tipo pessoa em JavaScript
-var pessoa = {
-	cpf: '111.222.333-44',
-	nome: 'Tadeu',
-	sobrenome: 'Nascimento',
-	dataNascimento: '27/09/1982'
-}
-
-// Criando  uma  nova  propriedade  no  objeto pessoa
-pessoa.profissao = 'Desenvolvedor Java';
-pessoa.favoritos = ['WestWorld',
-	'Altered Carbon',
-	'Blade Runner',
-	'X-Machina'];
-
-// Acessando  as  propriedades  do  Objeto
-console.log(pessoa);
-console.log(pessoa['cpf']);
-console.log(pessoa.dataNascimento);
-console.log(pessoa.favoritos[0]);
-// Tamanho  do  array
-console.log(pessoa.favoritos.length);
-
-// Ultimo  elemento  do  array
-console.log(pessoa.favoritos[pessoa.favoritos.length - 1]);
-
-// Declarando arrays e objetos
-// Podem  conter  outros  arrays  e objetos
-var dados = {
-	trial1: [[1, 2], [3, 4]],
-	trial2: [[5.6], [7.8]],
+_inteiros = 1;                                        // Números.
+_reais = 0.01;                                        // Tipo Number para inteiros e reais. 
+strings = "Hello word";                               // Aspas para textos.
+_strings = 'Javascript';                              // Apóstrofos também para Strings.'
+_true = true;                                         // Valores Boleano (true).
+_false = false;                                       // Valor Bolenano (false).   
+_null = null;                                         // Valor nulo (nenhum valor).
+_undefined = undefined;                               // Indefinido semelhante ao null.
+_objeto = {                                           // Objeto Javascript (JSON - Javascript Object Notation).
+    curso: 'Javascript',
+    periodo: 'madrugada',
+    duracao: 'Uma vida inteira'
 };
-console.log(dados);
+_array = [1, 2 ,'texto', true, false, _objeto.curso]; // Arrays
 
-var points = [{
-	x: 0,
-	y: 0
-}, {
-	x: 1,
-	y: 1
-}];
-console.log(points);
+// Acessando as propriedades do objeto ( . ou [] )
 
-// Passando  o  resultado de uma função para uma variável
-function plus1(numero) {
-	return numero + 1;
+const _periodo = _objeto.periodo;                // acesso com .
+console.log(`Período do curso: ${_periodo}`);
+
+const _curso = _objeto['curso'];                 // acesso com []
+console.log(`Linguagem do curso: ${_curso}`);
+
+// Criando uma nova propriedade no objeto por meio da atribuição.
+_objeto.valor = "R$1.200,00"
+console.log('Objeto',_objeto);
+
+// Cria um novo objeto vazio dentro do objeto.
+_objeto.conteudo = {};
+console.log('Objeto',_objeto);
+
+
+// Arrays (Listas indexadas numéricamente).
+const pares = [2, 4, 6, 8, 10, 12, 14];
+console.log('Tamanho da lista',pares.length);                      // length propriedade tamanho da lista.
+
+const primeiro = pares[0];              // Primeiro elemento da lista.
+console.log('Primeiro elemento da lista',primeiro);
+
+const ultimo = pares[pares.length - 1]; // Ultimo elemento da lista (usa o tamando da lista (length) - 1,
+console.log('último elemento da lista',ultimo);                           // para apontar o último indíce).
+
+// Declara um array vazio.
+const vazio = [];
+vazio.push('elemento');         // Insere um novo elemento no array.
+console.log(vazio);
+
+// Arrays de objetos;
+const _objetos = [
+    {objetoX:0, objetoY:1},
+    {objetoZ:1, objetoN:1},
+];
+console.log(_objetos);
+
+const _arrays = {
+    prop1:[ [1 ,2 ,3], [42, 52, 65] ],
+    prop2:[ [7, 8, 9], [10, 11, 12] ]
 }
-var square = function (numero) {
-	return numero * numero;
+console.log(_arrays.prop1[0][0]);
+
+// Atribuíndo uma função à uma variável.
+const funcaoPlus1 = (x) =>{
+    return x+1;
 }
-// Chama duas funções em uma  única  expressão
-console.log(square(plus1(5)));
-
-// Passando   propriedades  de um  objeto para uma função
-var a = [];
-a.push(1, 2, 3);             // Insere elementos no array
-console.log(a);
-console.log(a.reverse());// Inverte a ordem dos elementos
-
+const plus1 = funcaoPlus1(6);
+console.log(plus1);
