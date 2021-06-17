@@ -75,4 +75,8 @@ console.log(plus1);
 const $ehVerdade = 'café' === 'caf\u00e9' ? true : false;    // \u seguido de 4 digítos hexadecimais usando as letras de A-F.
 console.log($ehVerdade);  
 
+console.log('\"Usando aspas duplas em uma string\"');       // Aspas duplas \u0022
 
+console.log('\'Usando aspas simples em uma string\'');      // Aspas simples \u0027
+
+console.log("\\path\\arquivo\\usando-barra-invertida.js "); // Barra invertida \\
