@@ -10,8 +10,8 @@ console.log(dataNascimento);                        // 1982-09-27T03:00:00.000Z
 
 
 const milissegundos = agora - dataNascimento;                // subtrai as datas e retorna o resultaado em milessegundos (1221525665560).
-const idade = (milissegundos / (3.154 * (Math.pow(10,10)))); // 38.729431091439444  
-console.log(Math.floor(idade));                              // arredonda para 38
+const idade = parseInt(milissegundos / (3.154 * (Math.pow(10,10)))); // 38  
+console.log(idade);                              // 38
 
 
 const ano = dataNascimento.getFullYear();           // 1982
