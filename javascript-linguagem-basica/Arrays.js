@@ -102,6 +102,10 @@ var pares = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
 console.log('\npares antes da chamado do método concat', pares)
 console.log('array pares depois do métdo',pares.concat(22, 24, 26));
 
+pares.unshift(48,62); // insere os elementos no inicio do array.
+console.log(pares);
+// shift remove e retorna o primeiro elemento do array.
+
 // Inserindo e  removendo  elementos com o  métodos  pop()  e  push()
 console.log('\nInserindo o nome Ana no array nomes',nomes.push('Ana'));
 console.log('Após a inserção:',nomes.sort());
@@ -113,3 +117,11 @@ var nome = nomes.find(function(nome){
     return nome === 'Maria';
 });
 console.log('\nExibindo nome localizado no array nomes',nome);
+
+// outros exemplos usando reduce.
+var a = [1,2,3,4,5]
+var sum = a.reduce(function(x,y) { return x+y }, 0); // Soma de valores
+
+var product = a.reduce(function(x,y) { return x*y }, 1); // Produto de valores
+
+var max = a.reduce(function(x,y) { return (x>y)?x:y; }); // Maior valor
